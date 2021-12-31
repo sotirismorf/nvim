@@ -9,6 +9,7 @@ try
 	hi signcolumn   ctermbg=NONE guibg=NONE
 	hi link gitgutteradd gruvboxgreen 
 	hi link gitgutterchange gruvboxblue 
+	hi link gitgutterdelete gruvboxred 
 catch /^Vim\%((\a\+)\)\=:E185/
 	colorscheme default
   	set background=dark
