@@ -16,12 +16,23 @@ vim.cmd [[
 	augroup _markdown
 		autocmd!
 		autocmd FileType markdown setlocal wrap
-		autocmd FileType markdown setlocal spell
+		autocmd FileType markdown setlocal linebreak
+		autocmd FileType markdown setlocal spell spelllang=el,us
 	augroup end
 
 	augroup _javascript
 		autocmd!
 		autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab 
+	augroup end
+
+	augroup _typescript
+		autocmd!
+		autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 expandtab 
+	augroup end
+
+	augroup _json
+		autocmd!
+		autocmd FileType json setlocal shiftwidth=2 tabstop=2 expandtab 
 	augroup end
 
 	augroup _auto_resize
