@@ -13,6 +13,7 @@ local servers = {
 	"svelte",
 	"tsserver",
 	"pylsp",
+	"rust_analyzer",
 	"tailwindcss"
 }
 

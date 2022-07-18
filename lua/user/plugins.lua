@@ -51,7 +51,7 @@ return packer.startup(function(use)
 	use "akinsho/bufferline.nvim"
 	use "moll/vim-bbye"
 	use "nvim-lualine/lualine.nvim" -- A blazing fast and easy to configure Neovim statusline written in Lua
-	use "akinsho/toggleterm.nvim"
+	-- use "akinsho/toggleterm.nvim"
 	use "ahmedkhalf/project.nvim"
 	use "lewis6991/impatient.nvim"
 	use "lukas-reineke/indent-blankline.nvim"
@@ -59,7 +59,8 @@ return packer.startup(function(use)
 	use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
 	use "folke/which-key.nvim"
 	use "tranvansang/octave.vim"
-	use 'terminalnode/sway-vim-syntax'
+	use "NvChad/nvim-colorizer.lua"
+	-- use 'terminalnode/sway-vim-syntax'
 
 	-- Colorschemes
 	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -83,6 +84,7 @@ return packer.startup(function(use)
 	use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 	use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
 	use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+	use "b0o/SchemaStore.nvim"
 
 	-- Telescope
 	use "nvim-telescope/telescope.nvim"
