@@ -2,14 +2,14 @@ vim.cmd [[
 try
 	colorscheme gruvbox
 	set background=dark
-	hi normal       ctermbg=NONE guibg=NONE
-	hi vertsplit    ctermbg=NONE guibg=NONE
-	hi cursorline   ctermbg=NONE guibg=NONE
-	hi cursorlinenr ctermbg=NONE guibg=NONE
-	hi signcolumn   ctermbg=NONE guibg=NONE
-	hi link gitgutteradd gruvboxgreen 
-	hi link gitgutterchange gruvboxblue 
-	hi link gitgutterdelete gruvboxred 
+	" hi normal       ctermbg=NONE guibg=NONE
+	" hi vertsplit    ctermbg=NONE guibg=NONE
+	" hi cursorline   ctermbg=NONE guibg=NONE
+	" hi cursorlinenr ctermbg=NONE guibg=NONE
+	" hi signcolumn   ctermbg=NONE guibg=NONE
+	" hi link gitgutteradd gruvboxgreen 
+	" hi link gitgutterchange gruvboxblue 
+	" hi link gitgutterdelete gruvboxred 
 catch /^Vim\%((\a\+)\)\=:E185/
 	colorscheme default
   	set background=dark
