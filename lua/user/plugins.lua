@@ -63,9 +63,6 @@ return packer.startup(function(use)
 	-- use 'terminalnode/sway-vim-syntax'
 
 	-- Colorschemes
-	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-	-- use "lunarvim/darkplus.nvim"
-	-- use "morhetz/gruvbox"
 	use "ellisonleao/gruvbox.nvim"
 
 	-- cmp plugins
