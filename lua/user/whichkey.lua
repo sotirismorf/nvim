@@ -5,7 +5,7 @@ end
 
 local setup = {
 	plugins = {
-		marks = true, -- shows a list of your marks on ' and `
+		marks = false, -- shows a list of your marks on ' and `
 		registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
 		spelling = {
 			enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
@@ -20,7 +20,7 @@ local setup = {
 			windows = true, -- default bindings on <c-w>
 			nav = true, -- misc bindings to work with windows
 			z = true, -- bindings for folds, spelling and others prefixed with z
-			g = true, -- bindings for prefixed with g
+			g = false
 		},
 	},
 	-- add operators that will trigger motion and text object completion
@@ -84,7 +84,6 @@ local mappings = {
 		"Buffers",
 	},
 	["b"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-	["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = {
 		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -101,30 +100,6 @@ local mappings = {
 		S = { "<cmd>PackerStatus<cr>", "Status" },
 		u = { "<cmd>PackerUpdate<cr>", "Update" },
 	},
-
-	-- g = {
-	-- 	name = "Git",
-	-- 	g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
-	-- 	j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
-	-- 	k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
-	-- 	l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
-	-- 	p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
-	-- 	r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
-	-- 	R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-	-- 	s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-	-- 	u = {
-	-- 		"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
-	-- 		"Undo Stage Hunk",
-	-- 	},
-	-- 	o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
-	-- 	b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-	-- 	c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-	-- 	d = {
-	-- 		"<cmd>Gitsigns diffthis HEAD<cr>",
-	-- 		"Diff",
-	-- 	},
-	-- },
-
 	l = {
 		name = "LSP",
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
