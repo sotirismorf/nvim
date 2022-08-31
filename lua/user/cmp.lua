@@ -59,7 +59,7 @@ cmp.setup {
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		},
-		["<CR>"] = cmp.mapping.confirm { select = false },
+		["<CR>"] = cmp.mapping.confirm { select = true },
 	},
 	formatting = {
 		fields = { "abbr", "kind", "menu" },

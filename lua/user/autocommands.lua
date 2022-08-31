@@ -18,7 +18,7 @@ vim.cmd [[
 		autocmd!
 		autocmd FileType markdown setlocal wrap
 		autocmd FileType markdown setlocal linebreak
-		autocmd FileType markdown setlocal spell spelllang=el,us
+		" autocmd FileType markdown setlocal spell spelllang=el,us
 	augroup end
 
 	augroup _javascript

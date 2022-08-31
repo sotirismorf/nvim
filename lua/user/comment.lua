@@ -9,12 +9,12 @@ comment.setup {
 	sticky = true,
 	ignore = nil,
 	toggler = {
-		line = 'c',
-		block = 'C',
+		line = '<leader>c',
+		block = '<leader>C',
 	},
 	opleader = {
-		line = 'c',
-		block = 'C',
+		line = '<leader>c',
+		block = '<leader>C',
 	},
 	extra = {
 		above = 'gcO',
