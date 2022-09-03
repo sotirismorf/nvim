@@ -60,7 +60,13 @@ return packer.startup(function(use)
 	use "folke/which-key.nvim"
 	use "tranvansang/octave.vim"
 	use "NvChad/nvim-colorizer.lua"
-	-- use 'terminalnode/sway-vim-syntax'
+	use 'jamespeapen/swayconfig.vim'
+
+	-- install without yarn or npm
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function() vim.fn["mkdp#util#install"]() end,
+	})
 
 	-- Colorschemes
 	use "ellisonleao/gruvbox.nvim"
