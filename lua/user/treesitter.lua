@@ -4,35 +4,7 @@ if not status_ok then
 end
 
 configs.setup {
-	--ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-	ensure_installed = {
-		"bash",
-		"c",
-		"css",
-		"html",
-		"http",
-		"java",
-		"javascript",
-		"jsdoc",
-		"json5",
-		"jsonc",
-		"latex",
-		"make",
-		"markdown",
-		"markdown_inline",
-		"prisma",
-		"python",
-		"rust",
-		"scss",
-		"slint",
-		"sql",
-		"svelte",
-		"toml",
-		"typescript",
-		"vim",
-		"vue",
-		"yaml",
-	},
+	ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
 
 	auto_install = true,
 	sync_install = true, -- install languages synchronously (only applied to `ensure_installed`)

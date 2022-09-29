@@ -38,38 +38,44 @@ packer.init {
 	},
 }
 
--- Install your plugins here
 return packer.startup(function(use)
-	-- My plugins here
 	use "wbthomason/packer.nvim" -- Have packer manage itself
-	use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-	use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-	use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-	use "numToStr/Comment.nvim" -- Easily comment stuff
-	use "kyazdani42/nvim-web-devicons"
-	use "kyazdani42/nvim-tree.lua"
-	use "akinsho/bufferline.nvim"
-	use "moll/vim-bbye"
-	use "nvim-lualine/lualine.nvim" -- A blazing fast and easy to configure Neovim statusline written in Lua
-	-- use "akinsho/toggleterm.nvim"
-	use "ahmedkhalf/project.nvim"
-	use "lewis6991/impatient.nvim"
-	use "lukas-reineke/indent-blankline.nvim"
-	-- use "goolord/alpha-nvim"
-	use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-	use "folke/which-key.nvim"
-	use "tranvansang/octave.vim"
-	use "NvChad/nvim-colorizer.lua"
-	use 'jamespeapen/swayconfig.vim'
 
-	-- install without yarn or npm
+	-- syntax/visual
+	use "tranvansang/octave.vim"
+	use 'jamespeapen/swayconfig.vim'
+	use "NvChad/nvim-colorizer.lua"
+	use "kyazdani42/nvim-web-devicons"
+	use "lukas-reineke/indent-blankline.nvim"
+
+	-- components
+	use "kyazdani42/nvim-tree.lua"
+	use "nvim-lualine/lualine.nvim"
+	use "akinsho/bufferline.nvim"
+	use "folke/which-key.nvim"
+
+	-- utilities
+	use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+	use "numToStr/Comment.nvim" -- Easily comment stuff
+	use 'dstein64/vim-startuptime'
+	use "JoosepAlviste/nvim-ts-context-commentstring"
+	use "nvim-telescope/telescope.nvim"
+	use "lewis6991/gitsigns.nvim"
+	use "lewis6991/impatient.nvim" -- Monitor startup time
+	use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+	use "moll/vim-bbye" -- Better close buffer handling
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = function() vim.fn["mkdp#util#install"]() end,
 	})
+	use {
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+	}
 
 	-- Colorschemes
 	use "ellisonleao/gruvbox.nvim"
+	use "xiyaowong/nvim-transparent"
 
 	-- cmp plugins
 	use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -89,19 +95,6 @@ return packer.startup(function(use)
 	use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
 	use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 	use "b0o/SchemaStore.nvim"
-
-	-- Telescope
-	use "nvim-telescope/telescope.nvim"
-
-	-- Treesitter
-	use {
-		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate",
-	}
-	use "JoosepAlviste/nvim-ts-context-commentstring"
-
-	-- Git
-	use "lewis6991/gitsigns.nvim"
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
