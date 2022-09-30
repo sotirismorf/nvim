@@ -26,6 +26,7 @@ local options = {
 	shiftwidth = 4, -- the number of spaces inserted for each indentation
 	tabstop = 4, -- insert 2 spaces for a tab
 	number = true, -- set numbered lines
+	incsearch = true, -- set numbered lines
 	relativenumber = false, -- set relative numbered lines
 	numberwidth = 4, -- set number column width to 2 {default 4}
 	signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
