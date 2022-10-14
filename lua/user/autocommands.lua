@@ -23,7 +23,8 @@ vim.cmd [[
 
 	augroup _javascript
 		autocmd!
-		autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab 
+		autocmd filetype javascript setlocal shiftwidth=2 tabstop=2 expandtab 
+		autocmd filetype toml setlocal shiftwidth=2 tabstop=2 expandtab 
 	augroup end
 
 	augroup _typescript
