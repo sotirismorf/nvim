@@ -4,18 +4,24 @@ if not status_ok then
 end
 
 local servers = {
+	"ansiblels",
+	"bashls",
 	"cssls",
 	"graphql",
 	"html",
 	"jdtls",
 	"jsonls",
+	"pylsp",
+	"pyright",
+	"rust_analyzer",
+	"sqlls",
 	"sumneko_lua",
 	"svelte",
+	"tailwindcss",
+	"taplo",
 	"tsserver",
-	"pylsp",
-	"rust_analyzer",
-	"tailwindcss"
 }
+
 
 local settings = {
   ensure_installed = servers,
@@ -56,8 +62,8 @@ local opts = {}
 
 for _, server in pairs(servers) do
   opts = {
-    on_attach = require("user.lsp.handlers").on_attach,
-    capabilities = require("user.lsp.handlers").capabilities,
+    -- on_attach = require("user.lsp.handlers").on_attach,
+    -- capabilities = require("user.lsp.handlers").capabilities,
   }
 
   if server == "jsonls" then
