@@ -25,7 +25,7 @@ local setup = {
 	},
 	icons = {
 		breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-		separator = "➜", -- symbol used between a key and it's label
+		separator = "", -- symbol used between a key and it's label
 		group = "+", -- symbol prepended to a group
 	},
 	popup_mappings = {
@@ -35,7 +35,7 @@ local setup = {
 	window = {
 		border = "none", -- none, single, double, shadow
 		position = "bottom", -- bottom, top
-		margin = { 2, 2, 2, 2 }, -- extra window margin [top, right, bottom, left]
+		margin = { 0, 4, 2, 4 }, -- extra window margin [top, right, bottom, left]
 		padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
 		winblend = 0,
 	},
@@ -67,8 +67,6 @@ local mappings = {
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	l = {
 		name = "LSP",
-		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-		f = { "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
 		j = {
@@ -79,8 +77,11 @@ local mappings = {
 			"<cmd>lua vim.diagnostic.open_float(0, { scope = 'line' })<cr>",
 			"prev diagnostic",
 		},
-		h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
-		r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+		f = { "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", "Format" },
+		h = { vim.lsp.buf.hover, "Hover" },
+		r = { vim.lsp.buf.rename, "Rename" },
+		d = { vim.lsp.buf.definition, "Go to definition" },
+		m = { vim.lsp.buf.implementation , "Go to implementation" },
 	},
 	g = {
 		name = "Git",
