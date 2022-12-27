@@ -4,23 +4,24 @@ if not status_ok then
 end
 
 configs.setup {
-	ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+	ensure_installed = {
+		"bash",
+		"c",
+		"javascript",
+		"json",
+		"lua",
+		"python",
+		"typescript",
+		"yaml",
+	},
 
 	auto_install = true,
-	sync_install = true, -- install languages synchronously (only applied to `ensure_installed`)
 
-	ignore_install = { "" }, -- List of parsers to ignore installing
 	autopairs = {
 		enable = true,
 	},
 	highlight = {
-		enable = true, -- false will disable the whole extension
-		disable = { "" }, -- list of language that will be disabled
-	},
-	indent = { enable = true, disable = { "yaml" } },
-	context_commentstring = {
 		enable = true,
-		enable_autocmd = false,
+		additional_vim_regex_highlighting = false,
 	},
-	additional_vim_regex_highlighting = false,
 }
