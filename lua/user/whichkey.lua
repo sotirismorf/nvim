@@ -64,11 +64,11 @@ local opts = {
 
 local mappings = {
 	["b"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+	["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
 	l = {
 		name = "LSP",
 		i = { "<cmd>LspInfo<cr>", "Info" },
-		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+		I = { "<cmd>Mason<cr>", "Installer Info" },
 		j = {
 			"<cmd>lua vim.diagnostic.goto_next { float = { show_header = true } }<cr>",
 			"Next Diagnostic",
@@ -81,16 +81,14 @@ local mappings = {
 		h = { vim.lsp.buf.hover, "Hover" },
 		r = { vim.lsp.buf.rename, "Rename" },
 		d = { vim.lsp.buf.definition, "Go to definition" },
-		m = { vim.lsp.buf.implementation , "Go to implementation" },
+		m = { vim.lsp.buf.implementation, "Go to implementation" },
 	},
 	g = {
 		name = "Git",
 		b = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "Toggle git blame" },
 		w = { "<cmd>Gitsigns toggle_word_diff<cr>", "Toggle word diff" },
 	},
-	["s"] = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-		"Telescope"
-	},
+	s = { "<cmd>Telescope find_files<cr>", "Telescope" }
 }
 
 which_key.setup(setup)
