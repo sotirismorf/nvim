@@ -74,7 +74,7 @@ local mappings = {
 			"Next Diagnostic",
 		},
 		k = {
-			"<cmd>lua vim.diagnostic.open_float(0, { scope = 'line' })<cr>",
+			"<cmd>lua vim.diagnosjjtic.open_float(0, { scope = 'line' })<cr>",
 			"prev diagnostic",
 		},
 		f = { "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", "Format" },
@@ -86,6 +86,7 @@ local mappings = {
 	g = {
 		name = "Git",
 		b = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "Toggle git blame" },
+		B = { "<cmd>Gitsigns blame_line<cr>", "Toggle git blame" },
 		w = { "<cmd>Gitsigns toggle_word_diff<cr>", "Toggle word diff" },
 	},
 	s = { "<cmd>Telescope find_files<cr>", "Telescope" }
