@@ -7,6 +7,7 @@ configs.setup {
 	ensure_installed = {
 		"bash",
 		"c",
+		"vim",
 		"javascript",
 		"json",
 		"lua",
