@@ -87,7 +87,7 @@ return packer.startup(function(use)
 	}
 
 	use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-	-- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+	use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 	use "b0o/SchemaStore.nvim"
 
 	-- Automatically set up your configuration after cloning packer.nvim
