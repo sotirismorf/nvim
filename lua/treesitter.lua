@@ -7,13 +7,24 @@ configs.setup {
 	ensure_installed = {
 		"bash",
 		"c",
-		"vim",
+		"help",
 		"javascript",
 		"json",
 		"lua",
 		"python",
 		"typescript",
+		"vim",
 		"yaml",
+	},
+
+	incremental_selection = {
+		enable = true,
+		keymaps = {
+			init_selection = "<Leader>v",
+			node_incremental = "+",
+			scope_incremental = "=",
+			node_decremental = "-",
+		},
 	},
 
 	auto_install = true,
