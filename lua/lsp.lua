@@ -1,32 +1,26 @@
 require("mason").setup()
 
-require("mason-lspconfig").setup {
-	ensure_installed = {
-		"ansiblels",
-		"bashls",
-		"html",
-		"sumneko_lua",
-	},
-}
+local mason_lspconfig = require 'mason-lspconfig'
 
 local servers = {
 	"ansiblels",
 	"bashls",
 	"cssls",
-	"graphql",
+	"dockerls",
 	"html",
-	"jdtls",
 	"jsonls",
-	"yamlls",
 	"pylsp",
-	"pyright",
 	"rust_analyzer",
 	"sqlls",
 	"sumneko_lua",
 	"svelte",
-	-- "tailwindcss",
-	"taplo",
+	"tailwindcss",
 	"tsserver",
+	"yamlls",
+}
+
+mason_lspconfig.setup {
+	ensure_installed = servers
 }
 
 local lspconfig = require("lspconfig")
