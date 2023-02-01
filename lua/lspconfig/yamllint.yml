@@ -1,0 +1,5 @@
+---
+# https://yamllint.readthedocs.io/en/stable/rules.html
+rules:
+  indentation:
+    indent-sequences: false
