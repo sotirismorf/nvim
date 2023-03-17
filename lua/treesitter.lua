@@ -7,11 +7,15 @@ configs.setup {
 	ensure_installed = {
 		"bash",
 		"c",
+		"css",
 		"help",
 		"javascript",
 		"json",
 		"lua",
 		"python",
+		"query",
+		"sql",
+		"svelte",
 		"typescript",
 		"vim",
 		"yaml",
@@ -25,6 +29,10 @@ configs.setup {
 			scope_incremental = "=",
 			node_decremental = "-",
 		},
+	},
+
+	playground = {
+		enable = true
 	},
 
 	auto_install = true,

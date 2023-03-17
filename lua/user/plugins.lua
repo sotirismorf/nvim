@@ -45,6 +45,7 @@ require('packer').startup(function(use)
 	use { "windwp/nvim-spectre", requires = { "nvim-lua/plenary.nvim" } }
 
 	-- syntax/visual
+	use 'nvim-treesitter/playground'
 	use "ellisonleao/gruvbox.nvim"
 	use 'jamespeapen/swayconfig.vim'
 	use "NvChad/nvim-colorizer.lua"
