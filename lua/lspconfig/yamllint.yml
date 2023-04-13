@@ -1,10 +1,9 @@
----
 # https://yamllint.readthedocs.io/en/stable/rules.html
 rules:
   document-end:
     present: false
   document-start:
-    present: true
+    present: false
   indentation:
     spaces: consistent
     indent-sequences: true
