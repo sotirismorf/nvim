@@ -9,10 +9,10 @@ local servers = {
 	"dockerls",
 	"html",
 	"jsonls",
+	"lua_ls",
 	"pylsp",
 	"rust_analyzer",
 	"sqlls",
-	"sumneko_lua",
 	"svelte",
 	"tailwindcss",
 	"tsserver",
@@ -55,6 +55,7 @@ null_ls.setup {
 		},
 		null_ls.builtins.formatting.yamlfmt.with {
 			extra_args = { "--conf", vim.env.HOME .. '/.config/nvim/lua/lspconfig/yamlfmt.yml' }
+		}
 		-- null_ls.builtins.formatting.prettierd.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
 	},
 }
