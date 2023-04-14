@@ -16,25 +16,21 @@ vim.cmd [[
 
 	augroup _markdown
 		autocmd!
-		autocmd FileType markdown setlocal wrap
+		" autocmd FileType markdown setlocal wrap
 		autocmd FileType markdown setlocal linebreak
-		" autocmd FileType markdown setlocal spell spelllang=el,us
+		autocmd FileType markdown setlocal textwidth=80
+		autocmd FileType markdown setlocal spell spelllang=el,en_us
 	augroup end
 
-	augroup _javascript
+	augroup indent2spaces
 		autocmd!
-		autocmd filetype javascript setlocal shiftwidth=2 tabstop=2 expandtab 
-		autocmd filetype toml setlocal shiftwidth=2 tabstop=2 expandtab 
-	augroup end
-
-	augroup _typescript
-		autocmd!
-		autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 expandtab 
-	augroup end
-
-	augroup _json
-		autocmd!
-		autocmd FileType json setlocal shiftwidth=2 tabstop=2 expandtab 
+		autocmd FileType json setlocal shiftwidth=2 tabstop=2 expandtab
+		autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 expandtab
+		autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 expandtab
+		autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 expandtab
+		autocmd filetype javascript setlocal shiftwidth=2 tabstop=2 expandtab
+		autocmd filetype python setlocal shiftwidth=2 tabstop=2 expandtab
+		autocmd filetype toml setlocal shiftwidth=2 tabstop=2 expandtab
 	augroup end
 
 	augroup _auto_resize
