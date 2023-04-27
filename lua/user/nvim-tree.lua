@@ -15,7 +15,5 @@ nvim_tree.setup {
 				folder_arrow = false,
 			},
 		},
-		special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
-		symlink_destination = true,
 	},
 }
