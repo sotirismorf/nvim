@@ -37,6 +37,7 @@ require('packer').startup(function(use)
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-path",
 			"saadparwaiz1/cmp_luasnip",
+			"L3MON4D3/LuaSnip"
 		}
 	}
 
@@ -67,7 +68,6 @@ require('packer').startup(function(use)
 	use "windwp/nvim-autopairs"
 	use 'dstein64/vim-startuptime'
 
-	use "L3MON4D3/LuaSnip" --snippet engine
 	use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 	use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 	use "b0o/SchemaStore.nvim"

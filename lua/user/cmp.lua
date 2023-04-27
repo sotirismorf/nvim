@@ -8,14 +8,14 @@ if not snip_status_ok then
 	return
 end
 
-require("luasnip/loaders/from_vscode").lazy_load()
+luasnip.config.setup {}
 
 cmp.setup {
-	-- snippet = {
-	-- 	expand = function(args)
-	-- 		luasnip.lsp_expand(args.body) -- For `luasnip` users.
-	-- 	end,
-	-- },
+	snippet = {
+		expand = function(args)
+			luasnip.lsp_expand(args.body)
+		end,
+	},
 	mapping = {
 		["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
@@ -34,7 +34,7 @@ cmp.setup {
 	},
 	sources = {
 		{ name = "nvim_lsp" },
-		-- { name = "luasnip" },
+		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
 	},
