@@ -29,7 +29,6 @@ vim.cmd [[
 		autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 expandtab
 		autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 expandtab
 		autocmd filetype javascript setlocal shiftwidth=2 tabstop=2 expandtab
-		autocmd filetype python setlocal shiftwidth=2 tabstop=2 expandtab
 		autocmd filetype toml setlocal shiftwidth=2 tabstop=2 expandtab
 	augroup end
 

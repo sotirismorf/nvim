@@ -50,6 +50,7 @@ local null_ls = require("null-ls")
 null_ls.setup {
 	debug = false,
 	sources = {
+		null_ls.builtins.diagnostics.markdownlint,
 		null_ls.builtins.diagnostics.yamllint.with {
 			extra_args = { "-c", vim.env.HOME .. '/.config/nvim/lua/lspconfig/yamllint.yml' }
 		},
