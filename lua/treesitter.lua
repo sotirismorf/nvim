@@ -9,6 +9,7 @@ configs.setup {
 		"c",
 		"css",
 		"help",
+		"http",
 		"javascript",
 		"json",
 		"lua",
