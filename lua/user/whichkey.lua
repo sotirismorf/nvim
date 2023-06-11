@@ -64,6 +64,7 @@ local opts = {
 
 local mappings = {
 	["b"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+	["r"] = { "<cmd>lua require('rest-nvim').run()<CR>", "Send HTTP Request"  },
 	["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
 	l = {
 		name = "LSP",

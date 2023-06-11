@@ -42,6 +42,11 @@ require('packer').startup(function(use)
 	}
 
 	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+	use {
+		"rest-nvim/rest.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+		config = function() require('rest-nvim').setup() end
+	}
 	use { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } }
 	use { "windwp/nvim-spectre", requires = { "nvim-lua/plenary.nvim" } }
 
