@@ -2,7 +2,7 @@ pcall(require, "impatient")
 
 require "options"
 require "user.keymaps"
-require "user.plugins"
+require "plugins"
 require "user.colorscheme"
 require "telescope"
 require "user.autopairs"
