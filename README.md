@@ -1,64 +1,11 @@
-# My Neovim configuration
+# neovim neovim neovim neovim
 
-This configuration is forked from [this repo](https://github.com/LunarVim/Neovim-from-scratch)
+Tested with version `v0.9.1`
 
-[Watch this helpful playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ).
+## Features
 
-## Try out this config
-
-Make sure to remove or move your current `nvim` directory
-
-**IMPORTANT** requires `Neovim 0.6 release` version
-```
-git clone https://github.com/sotirismorf/nvim.git ~/.config/nvim
-```
-
-Run `nvim` and wait for the plugins to be installed 
-
-**NOTE** (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim) 
-
-## Get healthy
-
-Open `nvim` and enter the following:
-
-```
-:checkhealth
-```
-
-You'll probably notice you don't have support for copy/paste also that python and node haven't been setup
-
-So let's fix that
-
-First we'll fix copy/paste
-
-- On mac `pbcopy` should be builtin
-
-- On Ubuntu
-
-  ```
-  sudo apt install xsel
-  ```
-
-- On Arch Linux
-
-  ```
-  sudo pacman -S xsel
-  ```
-
-Next we need to install python support (node is optional)
-
-- Neovim python support
-
-  ```
-  pip install pynvim
-  ```
-
-- Neovim node support
-
-  ```
-  npm i -g neovim
-  ```
----
-
-**NOTE** make sure you have [node](https://nodejs.org/en/) installed, I recommend a node manager like [fnm](https://github.com/Schniz/fnm).
-
+- plugin manager: [lazy.nvim](https://github.com/folke/lazy.nvim)
+- file explorer: [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
+- searching stuff: [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- awesome syntax highlighting: [nvim-tresitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- LSP with [mason.nvim](https://github.com/williamboman/mason.nvim)

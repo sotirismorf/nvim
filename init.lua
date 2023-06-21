@@ -24,7 +24,3 @@ require "user.autopairs"
 require "user.autocommands"
 require "lsp"
 require "user.cmp"
-
--- require "user.indentline"
-
--- require "user.whichkey"
