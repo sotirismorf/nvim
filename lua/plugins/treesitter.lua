@@ -1,45 +1,49 @@
 return {
-	'nvim-treesitter/nvim-treesitter', build = ':TSUpdate',
-	opts = {
-		ensure_installed = {
-			"bash",
-			"c",
-			"css",
-			"http",
-			"javascript",
-			"json",
-			"lua",
-			"python",
-			"query",
-			"sql",
-			"svelte",
-			"typescript",
-			"vim",
-			"yaml",
-		},
-
-		incremental_selection = {
-			enable = true,
-			keymaps = {
-				init_selection = "<Leader>v",
-				node_incremental = "+",
-				scope_incremental = "=",
-				node_decremental = "-",
+	'nvim-treesitter/nvim-treesitter',
+	build = ':TSUpdate',
+	config = function()
+		require("nvim-treesitter.configs").setup {
+			ensure_installed = {
+				"bash",
+				"c",
+				"css",
+				"http",
+				"javascript",
+				"json",
+				"lua",
+				"python",
+				"query",
+				"sql",
+				"svelte",
+				"typescript",
+				"vim",
+				"yaml",
 			},
-		},
 
-		playground = {
-			enable = true
-		},
+			incremental_selection = {
+				enable = true,
+				keymaps = {
+					init_selection = "<Leader>v",
+					node_incremental = "+",
+					scope_incremental = "=",
+					node_decremental = "-",
+				},
+			},
 
-		auto_install = false,
+			playground = {
+				enable = true
+			},
 
-		autopairs = {
-			enable = true,
-		},
-		highlight = {
-			enable = true,
-			additional_vim_regex_highlighting = false,
-		},
-	}
+			auto_install = false,
+
+			autopairs = {
+				enable = true,
+			},
+			highlight = {
+				enable = true,
+				additional_vim_regex_highlighting = false,
+			},
+		}
+	end,
+	-- opts = {}
 }

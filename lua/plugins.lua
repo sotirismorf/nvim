@@ -24,7 +24,14 @@ return {
 
 	-- syntax/visual
 	-- { 'nvim-treesitter/playground' },
-	{ "ellisonleao/gruvbox.nvim" },
+	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
+		config = function()
+			vim.opt.termguicolors = true
+			vim.cmd.colorscheme 'gruvbox'
+		end,
+	},
 	{ 'jamespeapen/swayconfig.vim' },
 	{ "kyazdani42/nvim-web-devicons" },
 	{ "lukas-reineke/indent-blankline.nvim" },
