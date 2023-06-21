@@ -15,25 +15,20 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-local opts = {}
-
 require("lazy").setup("plugins")
--- require("lazy").setup(plugins, opts)
 
 -- require "options"
--- require "user.keymaps"
--- require "lazy"
--- require "user.colorscheme"
+require "user.keymaps"
+
 -- require "user.autopairs"
--- require "user.comment"
 -- require "user.gitsigns"
--- require "user.bufferline"
 -- require "user.autocommands"
 -- require "user.colorizer"
 -- require "user.indentline"
--- require "user.nvim-tree"
 -- require "user.lualine"
 -- require "user.cmp"
 
 -- require "user.whichkey"
 -- require "lsp"
+
+vim.cmd("colorscheme gruvbox")

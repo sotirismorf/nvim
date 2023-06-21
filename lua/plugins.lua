@@ -39,7 +39,6 @@ return {
 	{ "lewis6991/gitsigns.nvim" },
 	{ "lewis6991/impatient.nvim" },
 	{ "moll/vim-bbye" },
-	{ "numToStr/Comment.nvim" },
 	{ "windwp/nvim-autopairs" },
 	{ 'dstein64/vim-startuptime' },
 
