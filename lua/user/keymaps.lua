@@ -29,6 +29,8 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<Leader>b", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<Leader>s", ":Telescope find_files<CR>", opts)
 keymap("n", "<Leader>F", ":Telescope live_grep<CR>", opts)
+keymap("n", "<Leader>lI", "<cmd>Mason<cr>", opts)
+keymap("n", "<Leader>li", "<cmd>LspInfo<cr>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)

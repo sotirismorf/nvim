@@ -10,15 +10,15 @@ local on_attach = function(_, bufnr)
 	end
 
 	-- lsp
-	nmap('<Leader>i', vim.lsp.buf.implementation, 'Goto [i]mplementation')
 	nmap('<Leader>lD', vim.lsp.buf.hover, 'Hover [D]ocumentation')
 	nmap('<Leader>lS', vim.lsp.buf.signature_help, '[S]ignature documentation')
 	nmap('<Leader>la', vim.lsp.buf.code_action, 'Code [a]ction')
 	nmap('<Leader>ld', vim.lsp.buf.definition, 'Goto [d]efinition')
 	nmap('<Leader>le', vim.lsp.buf.declaration, 'Goto D[e]claration')
+	nmap('<Leader>lf', vim.lsp.buf.format, '[f]ormat buffer')
+	nmap('<Leader>li', vim.lsp.buf.implementation, 'Goto [i]mplementation')
 	nmap('<Leader>lr', vim.lsp.buf.rename, '[r]ename')
 	nmap('<Leader>lt', vim.lsp.buf.type_definition, '[t]ype definition')
-	nmap('<Leader>lf', vim.lsp.buf.format, '[f]ormat buffer')
 
 	-- diagnostics
 	nmap('<Leader>lj', vim.diagnostic.goto_next, 'Next diagnostic')
