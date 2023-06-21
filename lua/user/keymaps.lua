@@ -26,7 +26,16 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- Navigate buffers
+keymap("n", "<Leader>b", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<Leader>s", ":Telescope find_files<CR>", opts)
+keymap("n", "<Leader>F", ":Telescope live_grep<CR>", opts)
+keymap("n", "<Leader>lI", "<cmd>Mason<cr>", opts)
+keymap("n", "<Leader>li", "<cmd>LspInfo<cr>", opts)
+
+keymap("n", "<Leader>gb", "<cmd>Gitsigns toggle_current_line_blame<cr>", opts)
+keymap("n", "<Leader>gB", "<cmd>Gitsigns blame_line<cr>", opts)
+keymap("n", "<Leader>gw", "<cmd>Gitsigns toggle_word_diff<cr>", opts)
+
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
