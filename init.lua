@@ -22,8 +22,8 @@ require "user.keymaps"
 
 require "user.autopairs"
 require "user.autocommands"
-require "user.cmp"
 require "lsp"
+require "user.cmp"
 
 -- require "user.indentline"
 
