@@ -21,11 +21,8 @@ require("lazy").setup("plugins")
 require "user.keymaps"
 
 -- require "user.autopairs"
--- require "user.gitsigns"
 -- require "user.autocommands"
--- require "user.colorizer"
 -- require "user.indentline"
--- require "user.lualine"
 -- require "user.cmp"
 
 -- require "user.whichkey"

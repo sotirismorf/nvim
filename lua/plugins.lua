@@ -26,17 +26,14 @@ return {
 	-- { 'nvim-treesitter/playground' },
 	{ "ellisonleao/gruvbox.nvim" },
 	{ 'jamespeapen/swayconfig.vim' },
-	{ "NvChad/nvim-colorizer.lua" },
 	{ "kyazdani42/nvim-web-devicons" },
 	{ "lukas-reineke/indent-blankline.nvim" },
-	{ "nvim-lualine/lualine.nvim" },
 
 	-- components
 	{ 'folke/which-key.nvim',  opts = {} },
 
 	-- utilities
 	{ "JoosepAlviste/nvim-ts-context-commentstring" },
-	{ "lewis6991/gitsigns.nvim" },
 	{ "lewis6991/impatient.nvim" },
 	{ "moll/vim-bbye" },
 	{ "windwp/nvim-autopairs" },
