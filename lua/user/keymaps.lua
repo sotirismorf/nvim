@@ -32,7 +32,10 @@ keymap("n", "<Leader>F", ":Telescope live_grep<CR>", opts)
 keymap("n", "<Leader>lI", "<cmd>Mason<cr>", opts)
 keymap("n", "<Leader>li", "<cmd>LspInfo<cr>", opts)
 
--- Navigate buffers
+keymap("n", "<Leader>gb", "<cmd>Gitsigns toggle_current_line_blame<cr>", opts)
+keymap("n", "<Leader>gB", "<cmd>Gitsigns blame_line<cr>", opts)
+keymap("n", "<Leader>gw", "<cmd>Gitsigns toggle_word_diff<cr>", opts)
+
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
