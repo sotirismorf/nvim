@@ -32,7 +32,6 @@ return {
 	{ "nvim-lualine/lualine.nvim" },
 
 	-- components
-	{ "kyazdani42/nvim-tree.lua" },
 	{ 'folke/which-key.nvim',  opts = {} },
 
 	-- utilities
