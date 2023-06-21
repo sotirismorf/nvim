@@ -33,7 +33,6 @@ return {
 
 	-- components
 	{ "kyazdani42/nvim-tree.lua" },
-	{ "akinsho/bufferline.nvim" },
 	{ 'folke/which-key.nvim',  opts = {} },
 
 	-- utilities
