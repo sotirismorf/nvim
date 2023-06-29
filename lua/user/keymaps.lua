@@ -26,16 +26,25 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
-keymap("n", "<Leader>b", ":NvimTreeToggle<CR>", opts)
+-- Telescope
 keymap("n", "<Leader>s", ":Telescope find_files<CR>", opts)
 keymap("n", "<Leader>F", ":Telescope live_grep<CR>", opts)
-keymap("n", "<Leader>lI", "<cmd>Mason<cr>", opts)
-keymap("n", "<Leader>li", "<cmd>LspInfo<cr>", opts)
 
+-- Gitsigns
 keymap("n", "<Leader>gb", "<cmd>Gitsigns toggle_current_line_blame<cr>", opts)
 keymap("n", "<Leader>gB", "<cmd>Gitsigns blame_line<cr>", opts)
 keymap("n", "<Leader>gw", "<cmd>Gitsigns toggle_word_diff<cr>", opts)
 
+-- Fold
+keymap("n", "<Leader>f", "za", opts)
+
+-- Other
+keymap("n", "<Leader>b", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<Leader>r", "<cmd>lua require('rest-nvim').run()<CR>", opts)
+keymap("n", "<Leader>lI", "<cmd>Mason<cr>", opts)
+keymap("n", "<Leader>li", "<cmd>LspInfo<cr>", opts)
+
+-- Buffer move left and right
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 

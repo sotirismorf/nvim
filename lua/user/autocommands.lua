@@ -26,6 +26,7 @@ vim.cmd [[
 		autocmd!
 		autocmd FileType json setlocal shiftwidth=2 tabstop=2 expandtab
 		autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 expandtab
+		autocmd FileType svelte setlocal shiftwidth=2 tabstop=2 expandtab
 		autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 expandtab
 		autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 expandtab
 		autocmd filetype javascript setlocal shiftwidth=2 tabstop=2 expandtab

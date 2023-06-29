@@ -32,6 +32,13 @@ return {
 			vim.cmd.colorscheme 'gruvbox'
 		end,
 	},
+	{
+		"rest-nvim/rest.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require('rest-nvim').setup()
+		end
+	},
 	{ 'jamespeapen/swayconfig.vim' },
 	{ "kyazdani42/nvim-web-devicons" },
 	{ "lukas-reineke/indent-blankline.nvim" },

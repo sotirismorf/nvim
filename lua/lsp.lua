@@ -16,7 +16,7 @@ local on_attach = function(_, bufnr)
 	nmap('<Leader>ld', vim.lsp.buf.definition, 'Goto [d]efinition')
 	nmap('<Leader>le', vim.lsp.buf.declaration, 'Goto D[e]claration')
 	nmap('<Leader>lf', vim.lsp.buf.format, '[f]ormat buffer')
-	nmap('<Leader>li', vim.lsp.buf.implementation, 'Goto [i]mplementation')
+	nmap('<Leader>lm', vim.lsp.buf.implementation, 'Goto I[m]plementation')
 	nmap('<Leader>lr', vim.lsp.buf.rename, '[r]ename')
 	nmap('<Leader>lt', vim.lsp.buf.type_definition, '[t]ype definition')
 
@@ -41,6 +41,7 @@ local servers = {
 	bashls = {},
 	cssls = {},
 	dockerls = {},
+	gopls = {},
 	html = {},
 	jsonls = {},
 	lua_ls = {},

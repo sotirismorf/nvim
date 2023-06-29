@@ -7,6 +7,7 @@ return {
 				"bash",
 				"c",
 				"css",
+				"dockerfile",
 				"http",
 				"javascript",
 				"json",
