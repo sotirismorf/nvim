@@ -1,45 +1,35 @@
-local options = {
-	backup = false, -- creates a backup file
-	clipboard = "unnamedplus", -- allows neovim to access the system clipboard
-	cmdheight = 1, -- more space in the neovim command line for displaying messages
-	-- colorcolumn = "80",
-	completeopt = { "menuone" },
-	conceallevel = 0, -- so that `` is visible in markdown files
-	fileencoding = "utf-8", -- the encoding written to a file
-	hlsearch = true, -- highlight all matches on previous search pattern
-	ignorecase = true, -- ignore case in search patterns
-	mouse = "a", -- allow the mouse to be used in neovim
-	pumheight = 10, -- pop up menu height
-	showmode = false, -- we don't need to see things like -- INSERT -- anymore
-	showtabline = 2, -- always show tabs
-	smartcase = true, -- smart case
-	smartindent = true, -- make indenting smarter again
-	splitbelow = true, -- force all horizontal splits to go below current window
-	splitright = true, -- force all vertical splits to go to the right of current window
-	swapfile = false, -- creates a swapfile
-	termguicolors = true, -- set term gui colors (most terminals support this)
-	timeoutlen = 200, -- time to wait for a mapped sequence to complete (in milliseconds)
-	undofile = true, -- enable persistent undo
-	updatetime = 300, -- faster completion (4000ms default)
-	writebackup = false, -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
-	number = true, -- set numbered lines
-	incsearch = true, -- set numbered lines
-	relativenumber = false, -- set relative numbered lines
-	numberwidth = 4, -- set number column width to 2 {default 4}
-	signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
-	wrap = false, -- display lines as one long line
-	scrolloff = 0, -- is one of my fav
-	sidescrolloff = 0,
-	guifont = "monospace:h14", -- the font used in graphical neovim applications
-}
-
-vim.opt.shortmess:append "c"
-
-for k, v in pairs(options) do
-	vim.opt[k] = v
-end
-
 local o = vim.opt
+
+o.backup = false -- creates a backup file
+o.clipboard = "unnamedplus"
+o.cmdheight = 1 -- more space in the neovim command line for displaying messages
+o.completeopt = { "menuone" }
+o.conceallevel = 0 -- so that `` is visible in markdown files
+o.fileencoding = "utf-8" -- the encoding written to a file
+o.guifont = "monospace:h14" -- the font used in graphical neovim applications
+o.hlsearch = true -- highlight all matches on previous search pattern
+o.ignorecase = true -- ignore case in search patterns
+o.incsearch = true -- set numbered lines
+o.mouse = "a"
+o.number = true -- set numbered lines
+o.numberwidth = 4 -- set number column width to 2 {default 4}
+o.pumheight = 10 -- pop up menu height
+o.relativenumber = true
+o.shortmess:append "c"
+o.showmode = false -- we don't need to see things like -- INSERT -- anymore
+o.showtabline = 2 -- always show tabs
+o.signcolumn = "yes" -- always show the sign column, otherwise it would shift the text each time
+o.smartcase = true -- smart case
+o.smartindent = true
+o.splitbelow = true
+o.splitright = true
+o.swapfile = false -- creates a swapfile
+o.termguicolors = true
+o.timeoutlen = 200 -- time to wait for a mapped sequence to complete (in milliseconds)
+o.undofile = true -- enable persistent undo
+o.updatetime = 300 -- faster completion (4000ms default)
+o.wrap = false
+o.writebackup = false -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 
 -- text folding
 o.fillchars = { fold = " " }
@@ -51,6 +41,10 @@ o.foldmethod = "indent"
 o.expandtab = false -- convert tabs to spaces
 o.shiftwidth = 4 -- the number of spaces inserted for each indentation
 o.tabstop = 4 -- insert 2 spaces for a tab
+
+-- start scrolling before reaching the end
+o.scrolloff = 20
+o.sidescrolloff = 20
 
 vim.cmd "let g:loaded_perl_provider = 0"
 vim.cmd "let g:loaded_ruby_provider = 0"
