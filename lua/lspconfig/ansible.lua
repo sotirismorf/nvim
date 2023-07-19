@@ -4,10 +4,10 @@ lspconfig.ansiblels.setup {
 	settings = {
 		ansible = {
 			python = {
-				interpreterPath = '/home/sotiris/p/virtenvs/ansible-2.9/bin/python3',
+				interpreterPath = '/home/sotiris/p/venv/ansible/bin/python3',
 			},
 			ansible = {
-				path = '/home/sotiris/p/virtenvs/ansible-2.9/bin/ansible',
+				path = '/home/sotiris/p/venv/ansible/bin/ansible',
 			},
 			executionEnvironment = {
 				enabled = false,
@@ -16,7 +16,7 @@ lspconfig.ansiblels.setup {
 				enabled = true,
 				lint = {
 					enabled = true,
-					path = '/home/sotiris/p/virtenvs/ansible-2.9/bin/ansible-lint',
+					path = '/home/sotiris/p/venv/ansible/bin/ansible-lint',
 				},
 			},
 		},

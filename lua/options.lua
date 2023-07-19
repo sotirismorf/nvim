@@ -48,7 +48,7 @@ o.sidescrolloff = 20
 
 vim.cmd "let g:loaded_perl_provider = 0"
 vim.cmd "let g:loaded_ruby_provider = 0"
-vim.cmd 'let $PATH = $HOME . "/.config/nvm/versions/node/v16.18.0/bin:" . $PATH'
+vim.cmd 'let $PATH = $NVM_DIR . "/versions/node/v18.17.0/bin:" . $PATH'
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
