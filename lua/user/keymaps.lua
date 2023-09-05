@@ -26,6 +26,9 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
+-- Toggle keymaps (i.e. greek/english)
+keymap("i", "<C-k>", "<C-6>", opts)
+
 -- Telescope
 keymap("n", "<Leader>s", ":Telescope find_files<CR>", opts)
 keymap("n", "<Leader>F", ":Telescope live_grep<CR>", opts)

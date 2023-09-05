@@ -31,6 +31,11 @@ o.updatetime = 300 -- faster completion (4000ms default)
 o.wrap = false
 o.writebackup = false -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 
+-- load greek keymap
+o.keymap = "greek_utf-8"
+o.iminsert = 0 -- disable greek by default
+o.imsearch = -1 -- searching uses the same keymap as insert mode
+
 -- text folding
 o.fillchars = { fold = " " }
 o.foldenable = false
