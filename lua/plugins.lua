@@ -43,9 +43,6 @@ return {
 	{ "kyazdani42/nvim-web-devicons" },
 	{ "lukas-reineke/indent-blankline.nvim" },
 
-	-- components
-	{ 'folke/which-key.nvim',  opts = {} },
-
 	-- utilities
 	{ "JoosepAlviste/nvim-ts-context-commentstring" },
 	{ "lewis6991/impatient.nvim" },

@@ -30,22 +30,26 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("i", "<C-k>", "<C-6>", opts)
 
 -- Telescope
-keymap("n", "<Leader>s", ":Telescope find_files<CR>", opts)
-keymap("n", "<Leader>F", ":Telescope live_grep<CR>", opts)
+vim.keymap.set("n", "<Leader>s", require('telescope.builtin').find_files, { desc = "find files" })
+vim.keymap.set("n", "<Leader>F", require('telescope.builtin').live_grep, { desc = "live grep" })
 
 -- Gitsigns
-keymap("n", "<Leader>gb", "<cmd>Gitsigns toggle_current_line_blame<cr>", opts)
-keymap("n", "<Leader>gB", "<cmd>Gitsigns blame_line<cr>", opts)
-keymap("n", "<Leader>gw", "<cmd>Gitsigns toggle_word_diff<cr>", opts)
+vim.keymap.set("n", "<Leader>gb", require("gitsigns").toggle_current_line_blame, { desc = "toggle line blame" })
+vim.keymap.set("n", "<Leader>gB", require("gitsigns").blame_line, { desc = "hover blame" })
+vim.keymap.set("n", "<Leader>gw", require("gitsigns").toggle_word_diff, { desc = "toggle word diff" })
 
 -- Fold
-keymap("n", "<Leader>f", "za", opts)
+vim.keymap.set("n", "<Leader>f", "za", { desc = "toggle fold" })
+
+-- File explorer
 
 -- Other
-keymap("n", "<Leader>b", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<Leader>r", "<cmd>lua require('rest-nvim').run()<CR>", opts)
-keymap("n", "<Leader>lI", "<cmd>Mason<cr>", opts)
-keymap("n", "<Leader>li", "<cmd>LspInfo<cr>", opts)
+vim.keymap.set("n", "<Leader>b", ":NvimTreeToggle<CR>", { desc = "toggle file Explorer" })
+vim.keymap.set("n", "<Leader>r", require('rest-nvim').run, { desc = "send HTTP request" })
+
+-- LSP
+vim.keymap.set("n", "<Leader>lI", "<cmd>Mason<cr>", { desc = "Mason Interface" })
+vim.keymap.set("n", "<Leader>li", "<cmd>LspInfo<cr>", { desc = "LSP Info" })
 
 -- Buffer move left and right
 keymap("n", "<S-l>", ":bnext<CR>", opts)

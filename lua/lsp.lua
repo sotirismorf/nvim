@@ -10,7 +10,7 @@ local on_attach = function(_, bufnr)
 	end
 
 	-- lsp
-	nmap('<Leader>lD', vim.lsp.buf.hover, 'Hover [D]ocumentation')
+	nmap('<Leader>lh', vim.lsp.buf.hover, '[H]over Documentation')
 	nmap('<Leader>lS', vim.lsp.buf.signature_help, '[S]ignature documentation')
 	nmap('<Leader>la', vim.lsp.buf.code_action, 'Code [a]ction')
 	nmap('<Leader>ld', vim.lsp.buf.definition, 'Goto [d]efinition')
@@ -22,11 +22,12 @@ local on_attach = function(_, bufnr)
 
 	-- diagnostics
 	nmap('<Leader>lj', vim.diagnostic.goto_next, 'Next diagnostic')
+	nmap('<Leader>lk', vim.diagnostic.goto_prev, 'Next diagnostic')
 
 	-- telescope + lsp
 	nmap('<Leader>lR', require('telescope.builtin').lsp_references, 'List [R]eferences')
-	nmap('<Leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
-	nmap('<Leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+	nmap('<Leader>ls', require('telescope.builtin').lsp_document_symbols, 'Document [s]ymbols')
+	nmap('<Leader>lw', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace Symbols')
 
 	-- workspaces
 	nmap('<Leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
