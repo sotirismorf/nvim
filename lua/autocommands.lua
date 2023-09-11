@@ -5,7 +5,7 @@ vim.cmd [[
 		autocmd TextYankPost * silent!lua require('vim.highlight').on_yank({higroup = 'Visual', timeout = 200}) 
 		autocmd BufWinEnter * :set formatoptions-=cro
 		autocmd FileType qf set nobuflisted
-		autocmd BufRead */waybar/config set syntax=jsonc
+		autocmd BufNewFile,BufRead */waybar/config setlocal filetype=jsonc
 	augroup end
 
 	augroup _git

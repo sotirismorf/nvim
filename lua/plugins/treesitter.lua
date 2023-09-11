@@ -11,6 +11,7 @@ return {
 				"http",
 				"javascript",
 				"json",
+				"jsonc",
 				"lua",
 				"markdown",
 				"python",
