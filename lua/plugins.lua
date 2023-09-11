@@ -9,21 +9,15 @@ return {
 		},
 	},
 	{
-		'hrsh7th/nvim-cmp',
+		"L3MON4D3/LuaSnip",
 		dependencies = {
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-cmdline",
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-path",
-			"saadparwaiz1/cmp_luasnip",
-			"L3MON4D3/LuaSnip",
-			"rafamadriz/friendly-snippets"
-		},
+			"rafamadriz/friendly-snippets",
+			config = function()
+				require("luasnip.loaders.from_vscode").lazy_load()
+			end,
+		}
 	},
 	{ "windwp/nvim-spectre", dependencies = { "nvim-lua/plenary.nvim" } },
-
-	-- syntax/visual
-	-- { 'nvim-treesitter/playground' },
 	{
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
@@ -47,7 +41,6 @@ return {
 	{ "JoosepAlviste/nvim-ts-context-commentstring" },
 	{ "lewis6991/impatient.nvim" },
 	{ "moll/vim-bbye" },
-	{ "windwp/nvim-autopairs" },
 	{ 'windwp/nvim-autopairs', event = "InsertEnter", opts = {} },
 	{ 'dstein64/vim-startuptime' },
 
