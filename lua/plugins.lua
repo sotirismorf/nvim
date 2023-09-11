@@ -48,6 +48,7 @@ return {
 	{ "lewis6991/impatient.nvim" },
 	{ "moll/vim-bbye" },
 	{ "windwp/nvim-autopairs" },
+	{ 'windwp/nvim-autopairs', event = "InsertEnter", opts = {} },
 	{ 'dstein64/vim-startuptime' },
 
 	{ "jose-elias-alvarez/null-ls.nvim" }, -- for formatters and linters

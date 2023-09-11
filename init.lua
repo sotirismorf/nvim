@@ -21,6 +21,5 @@ require "options"
 require "keymaps"
 require "autocommands"
 
-require "user.autopairs"
 require "lsp"
 require "user.cmp"
