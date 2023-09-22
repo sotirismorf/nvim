@@ -48,6 +48,18 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- indent with 2 spaces
 vim.api.nvim_create_autocmd("FileType", {
+	group = augroup("wrap_lines"),
+	pattern = { "tex" },
+	callback = function()
+		vim.opt.wrap = true
+		vim.opt.linebreak = true
+		vim.keymap.set("n", "j", "gj", { desc = "navigate soft-wrapped lines" })
+		vim.keymap.set("n", "k", "gk", { desc = "navigate soft-wrapped lines" })
+	end,
+})
+
+-- indent with 2 spaces
+vim.api.nvim_create_autocmd("FileType", {
 	group = augroup("indent_with_2_spaces"),
 	pattern = {
 		"javascript",
