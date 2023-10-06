@@ -38,6 +38,7 @@ return {
 	{ "lukas-reineke/indent-blankline.nvim" },
 
 	-- utilities
+	{ "christoomey/vim-tmux-navigator" },
 	{ "JoosepAlviste/nvim-ts-context-commentstring" },
 	{ "lewis6991/impatient.nvim" },
 	{ "moll/vim-bbye" },
