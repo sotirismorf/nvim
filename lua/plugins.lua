@@ -47,4 +47,15 @@ return {
 
 	{ "jose-elias-alvarez/null-ls.nvim" }, -- for formatters and linters
 	{ "b0o/SchemaStore.nvim" },
+	{'akinsho/git-conflict.nvim', version = "*", config = true, opts = {
+		disable_diagnostics = true,
+		default_mappings = {
+			ours = '<Leader>go',
+			theirs = '<Leader>gt',
+			none = '<Leader>g0',
+			both = '<Leader>ga',
+			next = '<Leader>gn',
+			prev = '<Leader>gp',
+		},
+	}}
 }

@@ -40,10 +40,10 @@ end
 
 -- Highlight on yank
 vim.api.nvim_create_autocmd("TextYankPost", {
-  group = augroup("highlight_yank"),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+	group = augroup("highlight_yank"),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
 })
 
 -- indent with 2 spaces
@@ -105,4 +105,12 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 			pcall(vim.api.nvim_win_set_cursor, 0, mark)
 		end
 	end,
+})
+
+vim.api.nvim_create_autocmd('User', {
+	pattern = 'GitConflictDetected',
+	callback = function()
+		-- vim.diagnostic.disable()
+		vim.treesitter.stop()
+	end
 })
