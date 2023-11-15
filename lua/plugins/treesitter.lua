@@ -8,6 +8,8 @@ return {
 				"c",
 				"css",
 				"dockerfile",
+				"git_config",
+				"gitignore",
 				"go",
 				"http",
 				"javascript",
