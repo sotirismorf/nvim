@@ -47,15 +47,41 @@ return {
 
 	{ "jose-elias-alvarez/null-ls.nvim" }, -- for formatters and linters
 	{ "b0o/SchemaStore.nvim" },
-	{'akinsho/git-conflict.nvim', version = "*", config = true, opts = {
-		disable_diagnostics = true,
-		default_mappings = {
-			ours = '<Leader>go',
-			theirs = '<Leader>gt',
-			none = '<Leader>g0',
-			both = '<Leader>ga',
-			next = '<Leader>gn',
-			prev = '<Leader>gp',
-		},
-	}}
+	{
+		'akinsho/git-conflict.nvim',
+		version = "*",
+		config = true,
+		opts = {
+			disable_diagnostics = true,
+			default_mappings = {
+				ours = '<Leader>go',
+				theirs = '<Leader>gt',
+				none = '<Leader>g0',
+				both = '<Leader>ga',
+				next = '<Leader>gn',
+				prev = '<Leader>gp',
+			},
+		}
+	},
+	{
+		"nvim-neorg/neorg",
+		build = ":Neorg sync-parsers",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("neorg").setup {
+				load = {
+					["core.defaults"] = {}, -- Loads default behaviour
+					["core.concealer"] = {}, -- Adds pretty icons to your documents
+					["core.summary"] = {},
+					["core.dirman"] = { -- Manages Neorg workspaces
+						config = {
+							workspaces = {
+								notes = "~/p/repos/git/notes",
+							},
+						},
+					},
+				},
+			}
+		end,
+	},
 }
