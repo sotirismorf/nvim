@@ -15,6 +15,7 @@ vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Telescope
 vim.keymap.set("n", "<Leader>s", require('telescope.builtin').find_files, { desc = "find files" })
 vim.keymap.set("n", "<Leader>F", require('telescope.builtin').live_grep, { desc = "live grep" })
+vim.keymap.set("n", "fb", require('telescope.builtin').buffers, { desc = "search buffers" })
 
 -- Gitsigns
 vim.keymap.set("n", "<Leader>gb", require("gitsigns").toggle_current_line_blame, { desc = "toggle line blame" })
