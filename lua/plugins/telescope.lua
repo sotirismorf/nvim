@@ -8,6 +8,11 @@ return {
 			scroll_strategy = "limit",
 			border = true,
 			borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+		},
+		pickers = {
+			find_files = {
+				find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+			}
 		}
 	}
 }
