@@ -7,6 +7,11 @@ vim.cmd [[
 		autocmd BufNewFile,BufRead */waybar/config setlocal filetype=jsonc
 	augroup end
 
+	augroup _text
+		autocmd!
+		autocmd FileType text setlocal wrap linebreak
+	augroup end
+
 	augroup _git
 		autocmd!
 		autocmd FileType gitcommit setlocal wrap
