@@ -44,6 +44,7 @@ local servers = {
 	dockerls = {},
 	gopls = {},
 	html = {},
+	htmx = {},
 	jsonls = {},
 	lua_ls = {},
 	pylsp = {},
@@ -51,6 +52,7 @@ local servers = {
 	sqlls = {},
 	svelte = {},
 	tailwindcss = {},
+	templ = {},
 	tsserver = {},
 	yamlls = {},
 }

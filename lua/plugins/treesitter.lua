@@ -26,6 +26,7 @@ return {
 				"query",
 				"sql",
 				"svelte",
+				"templ",
 				"typescript",
 				"vim",
 				"vim",
