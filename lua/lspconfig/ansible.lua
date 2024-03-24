@@ -1,22 +1,15 @@
 local lspconfig = require("lspconfig")
 
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ansiblels
 lspconfig.ansiblels.setup {
 	settings = {
 		ansible = {
-			python = {
-				interpreterPath = '/home/sotiris/p/venv/ansible/bin/python3',
-			},
 			ansible = {
-				path = '/home/sotiris/p/venv/ansible/bin/ansible',
-			},
-			executionEnvironment = {
-				enabled = false,
+				path = vim.env.HOME .. '/p/venv/ansible/bin/ansible',
 			},
 			validation = {
-				enabled = true,
 				lint = {
-					enabled = true,
-					path = '/home/sotiris/p/venv/ansible/bin/ansible-lint',
+					path = vim.env.HOME .. '/p/venv/ansible/bin/ansible-lint',
 				},
 			},
 		},

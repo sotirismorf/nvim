@@ -51,9 +51,11 @@ o.tabstop = 4 -- insert 2 spaces for a tab
 o.scrolloff = 20
 o.sidescrolloff = 20
 
+vim.filetype.add({ extension = { templ = "templ" } })
+
 vim.cmd "let g:loaded_perl_provider = 0"
 vim.cmd "let g:loaded_ruby_provider = 0"
-vim.cmd 'let $PATH = $NVM_DIR . "/versions/node/v20.9.0/bin:" . $PATH'
+vim.cmd 'let $PATH = $NVM_DIR . "/versions/node/v20.11.1/bin:" . $PATH'
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
