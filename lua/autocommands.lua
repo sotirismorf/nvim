@@ -72,6 +72,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"jsonc",
 		"markdown",
 		"svelte",
+		"templ",
 		"norg",
 		"toml",
 		"typescript",

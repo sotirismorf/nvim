@@ -13,5 +13,10 @@ return {
 				},
 			},
 		},
+		filters = {
+			custom = {
+				"_templ.go$"
+			}
+		}
 	},
 }
