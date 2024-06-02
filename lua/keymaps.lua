@@ -29,8 +29,10 @@ vim.keymap.set("n", "<Leader>f", "za", { desc = "toggle fold" })
 
 -- Other
 vim.keymap.set("n", "<Leader>b", ":NvimTreeToggle<CR>", { desc = "toggle file Explorer" })
-vim.keymap.set("n", "<Leader>r", require('rest-nvim').run, { desc = "send HTTP request" })
+-- vim.keymap.set("n", "<Leader>r", require('rest-nvim').run, { desc = "send HTTP request" })
 vim.keymap.set("n", "<leader>ni", "<cmd>Neorg index<CR>", { desc = "Go to notes index" })
+
+vim.keymap.set("n", "<leader>c", "gcc", { desc = "Comment" })
 
 -- LSP
 vim.keymap.set("n", "<Leader>lI", "<cmd>Mason<cr>", { desc = "Mason Interface" })

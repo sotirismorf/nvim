@@ -20,10 +20,8 @@ vim.cmd [[
 
 	augroup _markdown
 		autocmd!
-		" autocmd FileType markdown setlocal wrap
-		autocmd FileType markdown setlocal linebreak
-		autocmd FileType markdown setlocal textwidth=80
-		autocmd FileType markdown setlocal spell spelllang=el,en_us
+		" autocmd FileType markdown setlocal wrap linebreak
+		autocmd FileType markdown,tex,plaintex setlocal textwidth=80 spell spelllang=el,en_us
 	augroup end
 
 	" start in insert mode when opening a terminal

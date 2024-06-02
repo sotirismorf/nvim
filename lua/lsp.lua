@@ -43,7 +43,7 @@ local servers = {
 	cssls = {},
 	dockerls = {},
 	gopls = {},
-	html = {},
+	-- html = {},
 	htmx = {},
 	jsonls = {},
 	lua_ls = {},
@@ -70,15 +70,23 @@ mason_lspconfig.setup {
 	ensure_installed = vim.tbl_keys(servers),
 }
 
-mason_lspconfig.setup_handlers {
-	function(server_name)
-		require('lspconfig')[server_name].setup {
-			capabilities = capabilities,
-			on_attach = on_attach,
-			settings = servers[server_name],
-		}
-	end,
-}
+for _, lsp in ipairs(vim.tbl_keys(servers)) do
+  require('lspconfig')[lsp].setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+	settings = servers[lsp],
+  })
+end
+
+-- mason_lspconfig.setup_handlers {
+-- 	function(server_name)
+-- 		require('lspconfig')[server_name].setup {
+-- 			capabilities = capabilities,
+-- 			on_attach = on_attach,
+-- 			settings = servers[server_name],
+-- 		}
+-- 	end,
+-- }
 
 require("lspconfig.ansible")
 require("lspconfig").tailwindcss.setup({
@@ -89,17 +97,17 @@ require("lspconfig").tailwindcss.setup({
 })
 
 -- -- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
-local null_ls = require("null-ls")
-null_ls.setup {
-	debug = false,
-	sources = {
-		null_ls.builtins.diagnostics.markdownlint.with { extra_args = { "--disable", "MD013" } },
-		null_ls.builtins.diagnostics.yamllint.with {
-			extra_args = { "-c", vim.env.HOME .. '/.config/nvim/lua/lspconfig/yamllint.yml' }
-		},
-		null_ls.builtins.formatting.yamlfmt.with {
-			extra_args = { "--conf", vim.env.HOME .. '/.config/nvim/lua/lspconfig/yamlfmt.yml' }
-		}
-		-- null_ls.builtins.formatting.prettierd.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
-	},
-}
+-- local null_ls = require("null-ls")
+-- null_ls.setup {
+-- 	debug = false,
+-- 	sources = {
+-- 		null_ls.builtins.diagnostics.markdownlint.with { extra_args = { "--disable", "MD013" } },
+-- 		null_ls.builtins.diagnostics.yamllint.with {
+-- 			extra_args = { "-c", vim.env.HOME .. '/.config/nvim/lua/lspconfig/yamllint.yml' }
+-- 		},
+-- 		null_ls.builtins.formatting.yamlfmt.with {
+-- 			extra_args = { "--conf", vim.env.HOME .. '/.config/nvim/lua/lspconfig/yamlfmt.yml' }
+-- 		}
+-- 		-- null_ls.builtins.formatting.prettierd.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
+-- 	},
+-- }

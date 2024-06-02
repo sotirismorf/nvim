@@ -29,14 +29,20 @@ return {
 	},
 	{
 		"rest-nvim/rest.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		ft = "http",
+		dependencies = { "luarocks.nvim" },
 		config = function()
-			require('rest-nvim').setup()
-		end
+			require("rest-nvim").setup()
+		end,
 	},
 	{ 'jamespeapen/swayconfig.vim' },
 	{ "kyazdani42/nvim-web-devicons" },
 	{ "lukas-reineke/indent-blankline.nvim" },
+	{
+		"vhyrro/luarocks.nvim",
+		priority = 1000,
+		config = true,
+	},
 
 	-- utilities
 	{ "christoomey/vim-tmux-navigator" },
