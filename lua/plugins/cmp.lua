@@ -1,50 +1,70 @@
 return {
 	"hrsh7th/nvim-cmp",
-	version = false, -- last release is way too old
-	event = "InsertEnter",
+	lazy = false,
+	priority = 100,
 	dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-path",
 		"saadparwaiz1/cmp_luasnip",
+		{ "L3MON4D3/LuaSnip", build = "make install_jsregexp" },
 	},
-	opts = function()
-		local cmp = require("cmp")
-		local defaults = require("cmp.config.default")()
+	config = function()
+		-- https://github.com/tjdevries/config.nvim/blob/master/lua/custom/plugins/completion.lua
+		-- https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
+
+		local cmp = require "cmp"
+		local luasnip = require "luasnip"
 
 		cmp.event:on(
 			'confirm_done',
 			require("nvim-autopairs.completion.cmp").on_confirm_done()
 		)
-		return {
-			completion = {
-				completeopt = "menu,menuone,noinsert",
-			},
-			snippet = {
-				expand = function(args)
-					require("luasnip").lsp_expand(args.body)
-				end,
-			},
-			mapping = cmp.mapping.preset.insert({
-				["<C-k>"] = cmp.mapping.select_prev_item(),
-				["<C-j>"] = cmp.mapping.select_next_item(),
-				["<S-Tab>"] = cmp.mapping.select_prev_item(),
-				["<Tab>"] = cmp.mapping.select_next_item(),
-				-- ["<C-k>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
-				-- ["<C-j>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
-				["<C-e>"] = cmp.mapping {
-					i = cmp.mapping.abort(),
-					c = cmp.mapping.close(),
-				},
-				["<CR>"] = cmp.mapping.confirm { select = true },
-			}),
-			sources = cmp.config.sources({
+
+		cmp.setup {
+			sources = {
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
 				{ name = "buffer" },
 				{ name = "path" },
-			}),
-			sorting = defaults.sorting,
+			},
+			mapping = {
+				['<CR>']    = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						if luasnip.expandable() then
+							luasnip.expand()
+						else
+							cmp.confirm({
+								select = true,
+							})
+						end
+					else
+						fallback()
+					end
+				end),
+				["<Tab>"]   = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.select_next_item()
+					elseif luasnip.locally_jumpable(1) then
+						luasnip.jump(1)
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
+
+				["<S-Tab>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.select_prev_item()
+					elseif luasnip.locally_jumpable(-1) then
+						luasnip.jump(-1)
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
+			},
+			completion = {
+				completeopt = "menu,menuone,noinsert",
+			},
 		}
 	end,
 }

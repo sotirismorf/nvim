@@ -15,7 +15,8 @@ return {
 		},
 		filters = {
 			custom = {
-				"_templ.go$"
+				"_templ.go$",
+				"_templ.txt$",
 			}
 		}
 	},
