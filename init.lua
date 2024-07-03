@@ -20,6 +20,4 @@ require("lazy").setup("plugins")
 require "options"
 require "keymaps"
 
-require "lsp"
-
 require "autocommands"

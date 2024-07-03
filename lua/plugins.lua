@@ -1,24 +1,8 @@
 return {
 	{
-		'neovim/nvim-lspconfig',
-		dependencies = {
-			{ 'williamboman/mason.nvim', config = true },
-			{ 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
-			'williamboman/mason-lspconfig.nvim',
-			'folke/neodev.nvim',
-		},
+		"windwp/nvim-spectre",
+		dependencies = { "nvim-lua/plenary.nvim" }
 	},
-	{
-		"L3MON4D3/LuaSnip",
-		dependencies = {
-			"rafamadriz/friendly-snippets",
-			config = function()
-				require("luasnip").filetype_extend("templ", { "html" })
-				require("luasnip.loaders.from_vscode").lazy_load()
-			end,
-		}
-	},
-	{ "windwp/nvim-spectre", dependencies = { "nvim-lua/plenary.nvim" } },
 	{
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
@@ -31,6 +15,16 @@ return {
 	{ "kyazdani42/nvim-web-devicons" },
 	{ "lukas-reineke/indent-blankline.nvim" },
 	{
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		config = true,
+		opts = {
+			scope = {
+				show_start = false,
+			},
+		},
+	},
+	{
 		"vhyrro/luarocks.nvim",
 		priority = 1000,
 		config = true,
@@ -41,11 +35,14 @@ return {
 	{ "JoosepAlviste/nvim-ts-context-commentstring" },
 	{ "lewis6991/impatient.nvim" },
 	{ "moll/vim-bbye" },
-	{ 'windwp/nvim-autopairs', event = "InsertEnter", opts = {} },
+	{
+		'windwp/nvim-autopairs',
+		event = "InsertEnter",
+		opts = {}
+	},
 	{ 'dstein64/vim-startuptime' },
 
 	{ "jose-elias-alvarez/null-ls.nvim" }, -- for formatters and linters
-	{ "b0o/SchemaStore.nvim" },
 	{
 		'akinsho/git-conflict.nvim',
 		version = "*",
